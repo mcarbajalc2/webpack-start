@@ -1,4 +1,5 @@
-$color: red;
-body{
-    background-color: red;
-}
+@import 
+    './scss/variables.scss',
+    '~bootstrap/dist/css/bootstrap-reboot.min.css',
+    './scss/header.scss',
+    './scss/banner.scss';
