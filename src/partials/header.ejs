@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><%= titulo %></title>
-    <link rel="stylesheet" href="./css/<%= nombre %>>.css">
-</head>
-<body>
-<header class="header">
-    <div class="container">
-        <div class="logotipo">
-            <h1>SORTEOS</h1>
-            <button class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-        <nav>
-            <ul>
-                <li>Inicio</li>
-                <li>Destacados</li>
-                <li>Gratis</li>
-            </ul>
-        </nav> 
-    </div>
-</header>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Purple Admin</title>
+    <!-- plugins:css -->
+    <!--<link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">-->
+    <!--<link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">-->
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="./images/favicon.png" />
+  </head>
+  <body>    
+    <div class="container-scroller">
+      <!-- partial:partials/_navbar.html -->
+      <%= require('./_navbar.ejs')() %>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_sidebar.html -->
+        <%= require('./_sidebar.ejs')() %>
+        <!-- partial -->        

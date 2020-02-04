@@ -1,4 +1,4 @@
-import './home.scss';
+import './login.scss';
 window.$ = $;
 window.jQuery = $;
 
