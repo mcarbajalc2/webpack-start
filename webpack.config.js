@@ -7,7 +7,8 @@ var webpack = require('webpack');
 let config = {
     entry: {
         home: './src/home.js',
-        login: './src/login.js'
+        login: './src/login.js',
+        'nuevo-reporte':  './src/nuevo-reporte.js'
     },
     output: {
         filename: 'js/[name].js',
@@ -53,6 +54,7 @@ files.forEach(file => {
     config.plugins.push(
         new HtmlWebpackPlugin({
             template: file,
+            chunks: [path.basename(file).replace('.ejs','')],
             filename: path.basename(file).replace('.ejs','.html')
         })
     );
