@@ -1,0 +1,76 @@
+<%= require('./partials/header.ejs')() %>
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="page-header">
+            <h3 class="page-title">
+            <span class="page-title-icon bg-gradient-primary text-white mr-2">
+                <i class="mdi mdi-plus"></i>
+            </span> Reportes </h3>
+            <nav aria-label="breadcrumb">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">
+                    <i class="mdi mdi-alert-circle-outline icon-sm text-primary align-middle" title="Programación de nuevo reporte."></i>
+                </li>
+            </ul>
+            </nav>
+        </div>
+        <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Nuevo Reporte</h4>
+                    <p class="card-description"> Programación de nuevo reporte. </p>
+                    <form class="forms-sample">
+                      <div class="form-group">
+                        <label for="exampleInputUsername1">Origen</label>
+                        <select class="form-control" name="cbxOrigen" id="cbxOrigen">
+                            <option value="">Seleccione un origen de datos</option>
+                            <option value="1">SIGAS</option>
+                            <option value="2">SIGAR</option>
+                            <option value="3">PAPELETAS</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Procedimiento Almacenado</label>
+                        <input type="text" class="form-control" name="txtProcedimiento" id="txtProcedimiento" placeholder="Ingrese el nombre del procedimiento">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Plantilla</label>
+                        <select class="form-control" name="cbxPlantilla" id="cbxPlantilla">
+                            <option value="">Seleccione una plantillas para el reporte</option>
+                            <option value="1">Tabla 1</option>
+                            <option value="1">Tabla 2</option>
+                            <option value="1">Tabla 3</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputConfirmPassword1">Frecuencia</label>
+                        <select class="form-control" name="cbxFrecuencia" id="cbxFrecuencia">
+                            <option value="">Seleccione una frecuencia para el reporte</option>
+                            <option value="1">Diario</option>
+                            <option value="1">Semanal</option>
+                            <option value="1">Mensual</option>
+                            <option value="1">Anual</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputConfirmPassword1">Hora</label>
+                        <select class="form-control" name="cbxFrecuencia" id="cbxFrecuencia">
+                            <option value="">Seleccione una hora para el reporte</option>
+                            <% let i = 0; for (i; i < 24; i++) { %>
+                                <option value="<%= i %>"><%= i %></option>
+                            <% } %>
+                        </select>
+                      </div>
+                      <button type="submit" class="btn btn-gradient-primary mr-2">Programar</button>
+                      <button class="btn btn-light">Cancelar</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+    <!-- content-wrapper ends -->
+    <%= require('./partials/_footer.ejs')() %>
+</div>
+<%= require('./partials/footer.ejs')() %>

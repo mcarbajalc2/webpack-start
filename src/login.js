@@ -1,11 +1,6 @@
 /* NECESARIO PARA EL PROYECTO - INICIO */
 import './login.scss';
-window.$ = $;
-window.jQuery = $;
-
-import 'bootstrap';
-import './js/hoverable-collapse';
-import './js/misc';
+import './js/main';
 import user from './js/clases/user';
 /* NECESARIO PARA EL PROYECTO - FIN */
 var btnIngresar = document.querySelector("#boton-ingresar");
